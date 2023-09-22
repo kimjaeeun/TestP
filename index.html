@@ -3,57 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>나의 포트폴리오</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Your Name</h1>
-        <p>Web Developer</p>
+        <h1>나의 포트폴리오</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
-    </section>
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="project" id="project1">
-            <img src="project1-thumbnail.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
-            <div class="details">
-                <h4>Project Details</h4>
-                <p>Details about Project 1.</p>
-                <!-- Add more details as needed -->
+
+    <section id="projects">
+        <h2>프로젝트</h2>
+        <div class="project">
+            <h3>프로젝트 1: 프로젝트 이름</h3>
+            <img class="project-thumbnail" src="project1-thumbnail.jpg" alt="프로젝트 1 썸네일">
+            <!-- 모달 열기 버튼 -->
+            <button class="modal-button">자세히 보기</button>
+            <!-- 모달 내용 -->
+            <div class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h3>프로젝트 1: 프로젝트 이름</h3>
+                    <p>프로젝트 설명: 이 부분에 프로젝트에 대한 자세한 설명을 추가하세요.</p>
+                    <p>기술 스택: 사용한 기술과 도구를 나열하세요.</p>
+                    <a href="#">프로젝트 링크</a>
+                </div>
             </div>
         </div>
-        <div class="project" id="project2">
-            <img src="project2-thumbnail.jpg" alt="Project 2">
-            <h3>Project 2</h3>
-            <p>Description of Project 2.</p>
-            <div class="details">
-                <h4>Project Details</h4>
-                <p>Details about Project 2.</p>
-                <!-- Add more details as needed -->
-            </div>
-        </div>
-        <!-- Add more projects as needed -->
+
+        <!-- 다른 프로젝트도 유사한 방식으로 추가하세요 -->
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your@email.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
-    <footer>
-        <p>&copy; 2023 Your Portfolio</p>
-    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
