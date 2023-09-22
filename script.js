@@ -1,12 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".project");
+// 모달 열기 및 닫기 기능
+const modalButtons = document.querySelectorAll('.modal-button');
+const modals = document.querySelectorAll('.modal');
+const closeButtons = document.querySelectorAll('.close-button');
 
-    projects.forEach(function (project) {
-        const details = project.querySelector(".details");
+modalButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        modals[index].style.display = 'block';
+    });
+});
 
-        project.addEventListener("click", function () {
-            // Toggle the visibility of project details
-            details.style.display = details.style.display === "none" ? "block" : "none";
-        });
+closeButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        modals[index].style.display = 'none';
+    });
+});
+
+window.addEventListener('click', (event) => {
+    modals.forEach((modal, index) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
     });
 });
